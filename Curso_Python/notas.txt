@@ -18,3 +18,25 @@ cd demo1
 
 ENTORNOS VIRTUALES
 pipenv
+
+enteros cadenas y tuplas son inmutables
+
+int = 2
+string = 'hola mundo'
+boolean = true
+float = 1,6
+list = ['a', 'b', 'c']
+tuple = ('d', 'e', 'f')
+conjunto = {'g','h','i'}
+diccionary = {'clave1' = 1, 'clave2' = 2 }
+
+
+.capilatize() //mayuscula primera letra
+.title() //todas las iniciales 
+.lower()
+.upper()
+.repace()
+.find()
+.split() //crear cadena en lista en cada espacio o depende el valor que se desee partir
+' '.join()
+.isnumeric()
