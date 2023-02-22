@@ -1,3 +1,9 @@
-texto2 = "este es el texto 2"
+texto = "Este es un texto"
 
-print(texto2)
+print(type(texto))
+
+print(texto)
+
+texto = "Se ha modificado el texto"
+
+print(texto)
