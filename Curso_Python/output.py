@@ -24,8 +24,8 @@ print(type(potato))
 print(potato.getNombre(), 'precio: ', potato.precio )
 
 class Estado:
-    players = Players()
-    status = Status()
+    #players = Players()
+    #status = Status()
     life_remaining = 12
     armor = False
 

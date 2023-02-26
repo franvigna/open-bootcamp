@@ -11,14 +11,21 @@ class Vehiculo:
         self.puertas = puertas
     
     def __str__(self):
-        return "Color {}, {} ruedas".format( self.color, self.ruedas, self.puertas )
-        
+        return f"Color {self.color}, {self.ruedas} ruedas, {self.puertas} puertas"
     
-v1 = Vehiculo(4, 'rojo', 2)
-f = open('Curso_Python/Ejercicio8/Vehiculo.bin','wb')
-pickle.dump(v1, f)
-f.close()    
+    
+GolTrend = Vehiculo(4, 'rojo', 2)
 
-f = open('Curso_Python/Ejercicio8/Vehiculo.bin','rb')
-potato = pickle.load(f)
-f.close()
+print(GolTrend)
+
+file = open('Curso_Python/Ejercicio8/Vehiculo.bin','w+b')
+
+pickle.dump(GolTrend, file)
+
+file.seek(0)    
+
+NuevoGolTrend = pickle.load(file)
+
+print(NuevoGolTrend)
+
+file.close()
