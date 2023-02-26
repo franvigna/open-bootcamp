@@ -1,7 +1,16 @@
-texto = "introduje texto en el archivo"
+file = open('Curso_Python/Ejercicio8/texto.txt', 'w')
+file.write('¡He creado mi primer archivo!\n')
+file.close()
 
-t = open('Curso_Python/Ejercicio8/texto.txt', 'w')
+file = open('Curso_Python/Ejercicio8/texto.txt', 'r+')
+file.readline()
+file.write('Esta es la segunda vez que escribo.\n')
+file.close()
 
-t.write(texto)
+file = open('Curso_Python/Ejercicio8/texto.txt', 'r+')
+file.readline()
+file.write('Esta es la tercera vez que escribo.\n')
 
-t.close()
+file.seek(0)
+print(file.read())
+file.close()
