@@ -10,28 +10,33 @@ win.geometry("700x350")
 
 # Define a function to get the output for selected option
 def selection():
-   selected = "You selected the option " + str(radio.get())
-   label.config(text=selected)
+    label.config(text="{}".format(radio.get()))
+    
+def reset():
+    radio.set(None)
+    label.config(text='')
+    
+    
+radio = StringVar()
+radio.set(None)
 
-radio = IntVar()
 Label(text="Cual es tu lenguaje de programacion favorito?", font=('Aerial 11')).pack()
 
 # Define radiobutton for each options
-r1 = Radiobutton(win, text="C++", variable=radio, value=1, command=selection)
+r1 = Radiobutton(win, text="C++", variable=radio, value="C++", command=selection)
 r1.pack(anchor=N)
 
-r2 = Radiobutton(win, text="Python", variable=radio, value=2, command=selection)
+r2 = Radiobutton(win, text="Python", variable=radio, value="Python", command=selection)
 r2.pack(anchor=N)
 
-r3 = Radiobutton(win, text="Java", variable=radio, value=3, command=selection)
+r3 = Radiobutton(win, text="Java", variable=radio, value="Java", command=selection)
 r3.pack(anchor=N)
-
-button = Button(win, text="reset", command=selection)
-button.pack(anchor=N)
 
 
 # Define a label widget
 label = Label(win)
 label.pack()
+
+Button(win, text="reset", command=reset).pack()
 
 win.mainloop()
